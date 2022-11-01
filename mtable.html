@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      td,
+      th {
+        border: 1px solid black;
+      }
+      td,
+      th {
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+
+  <body>
+    <table id="table"></table>
+
+    <script>
+      let row = Number(prompt('How many rows do you wont?'))
+      let col = Number(prompt('How many column do you wont?'))
+      
+      // for(let i = 1; i <= row*col; i++){
+      //   console.log(i)
+      // }
+   
+      for(let i = 1; i <= row; i++){
+        let tableRow = document.createElement('tr')
+        for(let s = 1; s<=col; s++){
+          let tableData = document.createElement('td')
+          tableRow.appendChild(tableData)
+          tableData.innerHTML = s
+          console.log(tableData)
+        }
+        console.log(tableRow)
+        // let temp = document.getElementById('table')
+        // temp.appendChild(temp)
+      }
+      </script>
+  </body>
+</html>
